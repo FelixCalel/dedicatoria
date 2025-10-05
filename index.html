@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Para Mi Amor</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family:Great+Vibes&family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Pantalla de entrada -->
+    <div id="entry-screen" class="entry">
+      <div class="entry-card">
+        <div class="entry-header">
+          <span class="entry-badge">Sorpresa</span>
+          <h1 class="entry-title">
+            Un pequeño universo<br /><span class="script">para nosotros</span>
+          </h1>
+        </div>
+        <div class="entry-actions">
+          <button id="enter-btn" class="btn btn-primary">Desliza mvd :3</button>
+        </div>
+      </div>
+      <div class="scroll-cue" aria-hidden="true">
+        <span>desliza</span>
+        <i class="arrow"></i>
+      </div>
+      <div class="bg-gradients" aria-hidden="true"></div>
+      <canvas id="interactive-bg" aria-hidden="true"></canvas>
+      <div class="parallax parallax-1" aria-hidden="true"></div>
+      <div class="parallax parallax-2" aria-hidden="true"></div>
+    </div>
+
+    <main id="main-content">
+      <!-- Hero de presentación (más protagonista que el fondo) -->
+      <section class="section hero glass" id="hero">
+        <div class="hero-inner">
+          <h2 class="hero-title">Para ti, mi persona favorita</h2>
+          <p class="hero-text">
+            Aquí va un pedacito de todo lo hermoso que me haces sentir. Si estás
+            lista, deslicemos juntos para descubrir el resto.
+          </p>
+          <button class="btn btn-ghost" id="btnScroll">Leer dedicatoria</button>
+        </div>
+        <div class="kiss-illustration" aria-hidden="true">
+          <!-- Silueta romántica en SVG -->
+          <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0" stop-color="#ffbbd4" />
+                <stop offset="1" stop-color="#f7a7c3" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M70,210 C90,160 130,150 150,145 C170,140 190,130 210,110 C230,90 260,80 290,95 C315,107 330,130 335,155 C340,180 325,210 300,225 C275,240 245,238 220,230 C195,222 175,210 155,215 C135,220 110,245 90,245 C70,245 55,230 70,210 Z"
+              fill="url(#g1)"
+              opacity=".8"
+            />
+            <circle cx="265" cy="135" r="8" fill="#3b0a45" />
+            <circle cx="240" cy="135" r="8" fill="#3b0a45" />
+            <path
+              d="M242,155 C252,160 258,160 268,155"
+              stroke="#3b0a45"
+              stroke-width="4"
+              fill="none"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+      </section>
+
+      <div class="content-wrapper">
+        <!-- Dedicatoria -->
+        <section class="section content glass reveal" id="dedicatoria">
+          <h3 class="section-title">Dedicatoria</h3>
+          <p class="text">
+            Gracias por ser mi lugar seguro y mi aventura favorita. Cada
+            instante a tu lado convierte lo cotidiano en extraordinario. Esta
+            página es solo un detalle para recordarte que en cada canción, cada
+            risa y cada silencio, te elijo una y otra vez.
+          </p>
+          <p class="text">
+            Te amo más allá de las palabras, más allá del tiempo. Eres mi
+            presente y mi futuro, mi inspiración y mi paz. Gracias por ser tú,
+            por esos momentos jugando Roblox o simplemente por estar ahí...
+          </p>
+        </section>
+
+        <!-- Mensaje final -->
+        <section class="section content glass reveal" id="final">
+          <h3 class="section-title">Siempre</h3>
+          <p class="text">
+            Hoy, mañana y cada día que venga… celebremos lo que somos. Si
+            llegaste hasta aquí, toca dos veces en la pantalla y mira lo que
+            pasa.
+          </p>
+          <p class="signature">Con todo mi amor, El amor de tu vida <3</p>
+        </section>
+      </div>
+    </main>
+
+    <!-- Audio -->
+    <audio id="background-music" preload="auto">
+      <source
+        src="/Ocie Elliott .- I Got You Honey,sub español.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
